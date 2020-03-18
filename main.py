@@ -5,18 +5,18 @@ def compareStrings(str1, str2):
     if a != b:
         return False
 
-    current =[]
-    for i in range(len(str1)):
-        current.append((str1[i], str2[i]))
-
+    current = {}
+    
         #checking for same strings in string 1 as they should not be mapped to different items
         #one to one matching
-
-    for i in range(len(str1)-1):
-        for j in range(len(str1) - 1):
-            if current[i][0] == current[j+1][0]:
-                if current[i][1] != current[j+1][1]:
-                    return False
+        
+     for i in range(len(str1)):
+        if str1[i] in current :
+            if current[str1[i]] != str2[i] :
+                return False
+        else :
+            current[str1[i]] = str2[i]
+   
     return True
 
 #get argument from the console
