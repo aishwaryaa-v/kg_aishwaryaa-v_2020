@@ -19,6 +19,8 @@ def compareStrings(str1, str2):
                     return False
     return True
 
-
-result = compareStrings("aabab","xxyxy")
+#get argument from the console
+a = sys.argv[1]
+b = sys.argv[2]
+result = compareStrings(a, b)
 print(result)
